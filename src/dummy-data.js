@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 export const dummyArray = [
   {
-    name: "MEN'S BETTER THAN NAKED&trade; JACKET",
+    name: "MEN'S JACKET",
     image: 'http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png',
     textAll: 'Shop All',
     url: 'http://www.thenorthface.com/catalog/sc-gear/men-39-s-better-than-naked-8482-jacket.html',
@@ -12,7 +12,7 @@ export const dummyArray = [
     id: 1,
   },
   {
-    name: "WOMEN'S BETTER THAN NAKED&trade; JACKET",
+    name: "WOMEN'S JACKET",
     image: 'http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/womens-better-than-naked-jacket-AVKL_NN4_hero.png',
     textAll: 'Shop All',
     url: 'http://www.thenorthface.com/catalog/sc-gear/women-39-s-better-than-naked-8482-jacket.html',
@@ -34,7 +34,7 @@ export const dummyArray = [
     id: 3,
   },
   {
-    name: 'Enduro Boa&reg; Hydration Pack',
+    name: 'ENDURO HYDRATION PACK',
     image: 'http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/enduro-boa-hydration-pack-AJQZ_JK3_hero.png',
     textAll: 'Shop All',
     url: 'http://www.thenorthface.com/catalog/sc-gear/enduro-boa.html',
@@ -45,7 +45,7 @@ export const dummyArray = [
     id: 4,
   },
   {
-    name: "MEN'S BETTER THAN NAKED&trade; JACKET",
+    name: "MEN'S JACKET",
     image: 'http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png',
     textAll: 'Shop All',
     url: 'http://www.thenorthface.com/catalog/sc-gear/men-39-s-better-than-naked-8482-jacket.html',
@@ -56,7 +56,7 @@ export const dummyArray = [
     id: 5,
   },
   {
-    name: "WOMEN'S BETTER THAN NAKED&trade; JACKET",
+    name: "WOMEN'S JACKET",
     image: 'http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/womens-better-than-naked-jacket-AVKL_NN4_hero.png',
     textAll: 'Shop All',
     url: 'http://www.thenorthface.com/catalog/sc-gear/women-39-s-better-than-naked-8482-jacket.html',
@@ -78,7 +78,7 @@ export const dummyArray = [
     id: 7,
   },
   {
-    name: 'Enduro Boa&reg; Hydration Pack',
+    name: 'ENDURO HYDRATION PACK',
     image: 'http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/enduro-boa-hydration-pack-AJQZ_JK3_hero.png',
     textAll: 'Shop All',
     url: 'http://www.thenorthface.com/catalog/sc-gear/enduro-boa.html',

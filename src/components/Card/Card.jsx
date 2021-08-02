@@ -1,5 +1,7 @@
 import React from 'react';
 import s from './Card.css';
+import likeLogo from '../../assets/like 1.svg';
+import viewsLogo from '../../assets/visibility 1.svg';
 
 const Card = ({
   name,
@@ -13,25 +15,25 @@ const Card = ({
 }) => (
   <>
     <div className={s.card}>
-      <img alt="product" src={image} />
+      <img className={s.image} alt="product" src={image} />
       <div className={s.cardBottom}>
         <div className={s.name}>{name}</div>
         <div className={s.info}>
-          <div className={s.likes}>
-            <div className={s.likeLogo}>import like logo in this card</div>
-            <div className={s.likeCount}>{likes}</div>
+          <div className={s.likesAndViews}>
+            <img className={s.logo} src={likeLogo} alt="logo" />
+            <div className={s.logoCount}>{likes}</div>
           </div>
-          <div className={s.views}>
-            <div className={s.viewsLogo}>import views logo in this card</div>
-            <div className={s.viewsCount}>{views}</div>
+          <div className={s.likesAndViews}>
+            <img className={s.logo} src={viewsLogo} alt="logo" />
+            <div className={s.logoCount}>{views}</div>
           </div>
         </div>
         <div className={s.buttons}>
           <a href={groupUrl}>
-            <button type="button">{textAll}</button>
+            <button className={s.button} type="button">{textAll}</button>
           </a>
           <a href={productUrl}>
-            <button type="button">{textNow}</button>
+            <button className={s.button} type="button">{textNow}</button>
           </a>
         </div>
       </div>
