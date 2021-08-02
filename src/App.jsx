@@ -1,11 +1,11 @@
 import React from 'react';
 import Searchbar from './components/SearchBar/SearchBar';
-import Card from './components/Card/Card';
+import Cards from './components/Card/Cards';
 
 const App = () => (
   <>
     <Searchbar />
-    <Card />
+    <Cards />
   </>
 );
 

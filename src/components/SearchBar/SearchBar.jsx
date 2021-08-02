@@ -3,7 +3,9 @@ import s from './SearchBar.css';
 
 const Searchbar = () => (
   <>
-    <input className={s.card} placeholder="Search" />
+    <div className={s.searchBar}>
+      <input placeholder="Search" />
+    </div>
   </>
 );
 

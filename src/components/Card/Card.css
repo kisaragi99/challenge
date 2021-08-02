@@ -1,4 +1,42 @@
 .card{
-    color: red;
-    border: 2px solid lime;
+    background-color: rgb(243, 243, 243);
+    width: 270px;
+    height: 360px;
+    margin: 10px;
+}
+image{
+
+}
+.cardBottom{
+
+}
+.name{
+
+}
+.info{
+    
+}
+.likes{
+    
+}
+.likesLogo{
+    
+}
+.likesCount{
+    
+}
+.views{
+    
+}
+.viewsLogo{
+    
+}
+.viewsCount{
+    
+}
+.buttons{
+    
+}
+button{
+
 }
