@@ -12,7 +12,7 @@ const devServer = (isDev) => !isDev ? {} : {
         contentBase: path.join(__dirname, 'public'),
     },
 };
-const esLintPlugin = (isDev) => isDev ? [] : [ new ESLintPlugin({ extensions: ['js'] }) ];
+const esLintPlugin = (isDev) => isDev ? [] : [new ESLintPlugin({ extensions: ['js'] })];
 
 module.exports = ({ development }) => ({
     mode: development ? 'development' : 'production',
@@ -32,32 +32,29 @@ module.exports = ({ development }) => ({
                 type: 'asset/resource',
             },
             {
-                test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader'],
-            },
-            {
-                test: /\.s[ac]ss$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-            },
-            {
                 test: /\.(js|jsx)$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
-                  loader: "babel-loader"
+                    loader: "babel-loader"
                 }
-              },
-              {
+            },
+            {
                 test: /\.css$/,
                 use: [
-                  "style-loader",
-                  {
-                    loader: "css-loader",
-                    options: {
-                      modules: true
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1,
+                            modules: {
+                                localIdentName: "[name]__[local]--[hash:base64:5]",
+                            }
+                        }
                     }
-                  }
                 ]
-              },
+            },
         ]
     },
     plugins: [
@@ -73,7 +70,7 @@ module.exports = ({ development }) => ({
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     ],
     resolve: {
-        extensions: ['.js','.jsx']
+        extensions: ['.js', '.jsx']
     },
     ...devServer(development),
 });
