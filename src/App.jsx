@@ -1,11 +1,12 @@
 import React from 'react';
-import Searchbar from './components/SearchBar/SearchBar';
+import Searchform from './components/SearchForm/SearchForm';
 import Cards from './components/Card/Cards';
 
 const App = () => (
   <>
-    <Searchbar />
+    <Searchform />
     <Cards />
+    {/* <div>Pagination Component</div> */}
   </>
 );
 

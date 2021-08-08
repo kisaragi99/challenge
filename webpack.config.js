@@ -12,7 +12,7 @@ const devServer = (isDev) => !isDev ? {} : {
         contentBase: path.join(__dirname, 'public'),
     },
 };
-const esLintPlugin = (isDev) => isDev ? [] : [new ESLintPlugin({ extensions: ['js'] })];
+const esLintPlugin = (isDev) => isDev ? [] : [new ESLintPlugin({ extensions: ['js', 'jsx'] })];
 
 module.exports = ({ development }) => ({
     mode: development ? 'development' : 'production',

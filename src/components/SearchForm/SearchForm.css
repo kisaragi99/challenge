@@ -1,0 +1,82 @@
+.wrapper{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 40% 40% 1fr;
+    grid-template-areas: 
+    "search search button"
+    "sort select ."
+    ". loader .";
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* search bar */
+.searchBar{
+    grid-area: search;
+    display: grid;
+    place-items: center;
+    margin-bottom: 15px;
+    
+}
+
+/* input  */
+.input, .inputError{
+    border-radius: 10px;
+    height: 27px;
+    width: 100%;
+}
+.input{
+    border: 2px solid #5E4AE3;
+    height: 27px;
+}
+.inputError{
+    border: 2px solid #f60000;
+    caret-color: rgb(238, 0, 0);
+}
+input:focus{
+    outline: none;
+}
+
+/* search bar */
+.button{
+    grid-area: button;
+    padding: 10px;
+    margin: 6px 0 0 15px;
+    background-color: #50d144;
+    border: 0;
+    border-radius: 5px;
+    color: rgb(36, 36, 36);
+    cursor: pointer;
+}
+
+/* selects */
+.order{
+    grid-area: sort;
+    margin: 5px;
+}
+
+.select{
+    grid-area: select;
+    margin: 5px;
+}
+
+select{
+    padding: 7px;
+    border: 0;
+    background-color: #F3F3F3;
+    width: 180px;
+}
+
+/* loader */
+.loader{
+    grid-area: loader;
+}
+
+
+/* error text */
+.errorText{
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    margin: 41px 0 0 0;
+}
