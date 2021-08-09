@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/no-array-index-key */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import useForm from '../../useForm';
-import validate from '../../validationRules';
-import Loader from '../Loader/Loader';
+import validate from '../../validationRules'; import Loader from '../Loader/Loader';
 import s from './SearchForm.css';
+import { booksAPI } from '../../api/api';
 
 const Searchform = () => {
   const [formData, setFormData] = useState({});
@@ -16,6 +17,13 @@ const Searchform = () => {
     handleChange,
     handleSubmit,
   } = useForm(setFormData, validate);
+
+  async function sats() {
+    const data = await booksAPI.getBooksData(30, 'newest', 'Словарь', 1);
+    console.log(data);
+  };
+
+  sats();
 
   return (
     <div style={{ display: 'grid', placeItems: 'center' }}>
@@ -45,7 +53,7 @@ const Searchform = () => {
               value={values.order || ''}
               onChange={(e) => { handleChange(e); }}
             >
-              {['relevance', 'newest', 'default'].map((el, i) => (
+              {['relevance', 'newest'].map((el, i) => (
                 <option key={i}>{el}</option>
               ))}
             </select>

@@ -6,6 +6,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
+    "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "^7.14.9",
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
@@ -29,13 +30,30 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@babel/runtime": "^7.14.8",
+    "axios": "^0.21.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.1",
+    "redux-thunk": "^2.3.0"
   },
   "babel": {
     "presets": [
       "@babel/env",
       "@babel/react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "absoluteRuntime": false,
+          "corejs": false,
+          "helpers": true,
+          "regenerator": true,
+          "version": "7.0.0-beta.0"
+        }
+      ]
     ]
   }
 }
