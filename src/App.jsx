@@ -1,13 +1,16 @@
 import React from 'react';
-import Searchform from './components/SearchForm/SearchForm';
-import Cards from './components/Card/Cards';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Search from './components/Search/Search';
+import Book from './components/Book/Book';
 
 const App = () => (
-  <>
-    <Searchform />
-    <Cards />
-    {/* <div>Pagination Component</div> */}
-  </>
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Search} />
+      <Route exact path="/book" component={Book} />
+      <Route path="*" render={() => <div>Page not found. Error 404.</div>} />
+    </Switch>
+  </BrowserRouter>
 );
 
 export default App;

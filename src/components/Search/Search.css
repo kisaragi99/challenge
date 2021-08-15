@@ -1,11 +1,12 @@
 .wrapper{
     display: grid;
+    place-items: center;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 40% 40% 1fr;
     grid-template-areas: 
     "search search button"
-    "sort select ."
-    ". loader .";
+    "sort select load"
+    "total loader .";
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -14,16 +15,14 @@
 .searchBar{
     grid-area: search;
     display: grid;
-    place-items: center;
-    margin-bottom: 15px;
-    
+    width: 100%;
 }
 
 /* input  */
 .input, .inputError{
     border-radius: 10px;
     height: 27px;
-    width: 100%;
+    width: 100%;    
 }
 .input{
     border: 2px solid #5E4AE3;
@@ -37,25 +36,20 @@ input:focus{
     outline: none;
 }
 
-/* search bar */
 .button{
     grid-area: button;
-    padding: 10px;
-    margin: 6px 0 0 15px;
-    background-color: #50d144;
-    border: 0;
-    border-radius: 5px;
-    color: rgb(36, 36, 36);
-    cursor: pointer;
 }
+.loadMore{
+    grid-area: load-button;
+}
+
 
 /* selects */
 .order{
     grid-area: sort;
-    margin: 5px;
 }
 
-.select{
+.category{
     grid-area: select;
     margin: 5px;
 }
@@ -66,6 +60,14 @@ select{
     background-color: #F3F3F3;
     width: 180px;
 }
+
+/* totalBooks */
+.totalBooks{
+    grid-area: total;
+    margin-right: auto;
+    color: #5E4AE3;
+}
+
 
 /* loader */
 .loader{
@@ -78,5 +80,24 @@ select{
     color: red;
     font-size: 14px;
     position: absolute;
-    margin: 41px 0 0 0;
+    margin: 34px 0 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper{
+        grid-template-rows: 70px 1fr 1fr 1fr 1fr;
+        grid-template-columns: 80% 1fr;
+        grid-template-areas: 
+        "search button"
+        "sort sort"
+        "select select"
+        "total load-button"
+        "loader loader";
+    }
+
+    .input, .inputError{
+        border-radius: 10px;
+        height: 27px;
+        width: 90%;
+    }
 }

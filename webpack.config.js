@@ -10,6 +10,7 @@ const devServer = (isDev) => !isDev ? {} : {
         open: true,
         port: 9000,
         contentBase: path.join(__dirname, 'public'),
+        historyApiFallback : true,
     },
 };
 const esLintPlugin = (isDev) => isDev ? [] : [new ESLintPlugin({ extensions: ['js', 'jsx'] })];
