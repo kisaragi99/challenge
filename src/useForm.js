@@ -1,21 +1,23 @@
 import { useState, useEffect } from 'react';
 
-const useForm = (setData, validate) => {
+const useForm = (getBooks, validate) => {
   const [values, setValues] = useState({
     order: 'relevance',
-    elements: '10',
+    category: 'all',
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // if there is no errors and handle submit was invoked we invoke getBooks with form data.
+  // Then we rewrite values state with same fiedls. So select values will not change in ui.
   useEffect(() => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
-      setData(values);
+      getBooks(values);
       setValues({
         order: values.order,
-        elements: values.elements,
+        category: values.category,
       });
-      console.log(values);
+      setIsSubmitting(false);
     }
   }, [errors]);
 
@@ -27,11 +29,7 @@ const useForm = (setData, validate) => {
 
   const handleChange = (event) => {
     event.persist();
-    if (event.target.type === 'checkbox') {
-      setValues((vals) => ({ ...vals, [event.target.name]: event.target.checked }));
-    } else {
-      setValues((vals) => ({ ...vals, [event.target.name]: event.target.value }));
-    }
+    setValues((vals) => ({ ...vals, [event.target.name]: event.target.value }));
   };
 
   return {

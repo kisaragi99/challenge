@@ -1,12 +1,17 @@
 .card{
     display: flex;
     flex-direction: column;
-    width: 270px;
-    height: 320px;
-    margin: 10px;
+    width: 225px;
+    height: 360px;
+    margin: 15px;
     background-color: rgb(243, 243, 243);
     border-radius: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.image{
+    height: 200px;
+    border-radius: 10px 10px 0 0 ;
 }
 .cardBottom{
     display: flex;
@@ -23,29 +28,13 @@
 }
 .info{
     display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     flex-wrap: wrap;
-}
-.likesAndViews{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.logo{
-    width: 24px;   
-    margin-right: 5px;
-}
-.logoCount{
     font-size: 12px;
-    font-weight: 400;
-    margin-right: 15px;
 }
-.button{
-    margin-right: 10px;
-    background-color: #3F89EB;
-    border: 0;
-    border-radius: 5px;
-    padding: 5px;
-    color: white;
-    cursor: pointer;
+.categories{
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #851fc8;
 }

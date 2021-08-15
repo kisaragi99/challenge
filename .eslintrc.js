@@ -23,5 +23,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/prop-types': 0,
+    'jsx-a11y/click-events-have-key-events': 'off',
   },
 };
