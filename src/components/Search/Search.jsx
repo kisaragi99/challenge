@@ -3,7 +3,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import useForm from '../../useForm';
-import validate from '../../validationRules'; import Loader from '../Blocks/Loader/Loader';
+import validate from '../../validationRules'; 
+import Loader from '../Blocks/Loader/Loader';
 import { getBooksFirstPage, getMoreBooks } from '../../store/reducers/searchForm-reducer';
 import s from './Search.css';
 import Cards from '../Card/Cards';
